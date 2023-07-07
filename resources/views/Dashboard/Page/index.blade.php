@@ -18,7 +18,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <button type="button" class="btn btn-primary" data-toggle="modal"
-                                        data-target="#exampleModal">
+                                        data-target="#exampleModal"><i class="fas fa-plus"></i>
                                         Create Pages
                                     </button>
                                 </div>
@@ -39,6 +39,12 @@
                                             <td>{{$p->page}}</td>
                                             <td>{{$p->status}}</td>
                                             <td>
+                                            <input data-id="{{$p->id}}" class="toggle-class" type="checkbox" data-onstyle="success" data-offstyle="danger" data-toggle="toggle" data-on="Active" data-off="InActive" 
+                                            @if($p->status == "on")
+                                            {{ $p->status ? 'checked' : '' }}
+                                            @endif
+                                            > 
+
                                                 <a href="" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                 <a href="" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                                             </td>

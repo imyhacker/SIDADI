@@ -21,5 +21,23 @@
   <!-- Template JS File -->
   <script src="https://demo.getstisla.com/assets/js/scripts.js"></script>
   <script src="https://demo.getstisla.com/assets/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+  <script>
+   $(function() { 
+           $('.toggle-class').change(function() { 
+           var status = $(this).prop('checked') == true ? "on" : "off";  
+           var id = $(this).data('id');  
+           $.ajax({ 
+    
+               type: "GET", 
+               dataType: "json", 
+               url: '/home/pages/switch', 
+               data: {'status': status, 'id': id}, 
+               success: function(data){ 
+            } 
+         }); 
+      }) 
+   }); 
+</script>
 </body>
 </html>

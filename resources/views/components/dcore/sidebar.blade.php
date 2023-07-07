@@ -19,7 +19,7 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Profil</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-lin beep beep-sidebar" href="https://demo.getstisla.com/components-article.html">Data Diri</a></li>                
+                <li><a class="nav-lin beep beep-sidebar" href="{{route('data_diri')}}">Data Diri</a></li>                
                 <li><a class="nav-lin beep beep-sidebar" href="https://demo.getstisla.com/components-article.html">Data Pendidikan</a></li>
                 <li><a class="nav-lin beep beep-sidebar" href="https://demo.getstisla.com/components-article.html">Data Pengalaman</a></li> 
                 <li><a class="nav-lin beep beep-sidebar" href="https://demo.getstisla.com/components-article.html">Data Sertifikasi</a></li> 

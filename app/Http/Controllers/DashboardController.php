@@ -19,4 +19,15 @@ class DashboardController extends Controller
         ]); 
         return redirect()->back()->with('success', 'Berhasil Menambahkan Pages');
     }
+    public function switch(Request $req){
+        $data = Pages::find($req->id);
+        $a = $data->update([
+            'status' => $req->status,
+        ]);
+    }
+
+    // data diri
+    public function data_diri(){
+        return view('Dashboard/Profil/data_diri');
+    }
 }

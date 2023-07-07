@@ -23,9 +23,15 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::controller(DashboardController::class)->prefix('/home/pages')->group(function(){
+Route::controller(DashboardController::class)->prefix('/home/pages')->group(function($id = null){
 
     Route::get('', 'page')->name('page');
     Route::post('/add_page', 'add_page')->name('add_page');
+    Route::get('/switch', 'switch')->name('switch');
+});
 
+Route::controller(DashboardController::class)->prefix('/home/profil')->group(function($id = null){
+
+    Route::get('/data_diri', 'data_diri')->name('data_diri');
+   
 });
