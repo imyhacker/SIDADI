@@ -33,5 +33,6 @@ Route::controller(DashboardController::class)->prefix('/home/pages')->group(func
 Route::controller(DashboardController::class)->prefix('/home/profil')->group(function($id = null){
 
     Route::get('/data_diri', 'data_diri')->name('data_diri');
+    Route::post('/data_diri/up_diri', 'up_diri')->name('up_diri');
    
 });

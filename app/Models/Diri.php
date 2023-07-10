@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Diri extends Model
 {
     use HasFactory;
+    protected $table = 'diri';
+    protected $guarded = [];
 }

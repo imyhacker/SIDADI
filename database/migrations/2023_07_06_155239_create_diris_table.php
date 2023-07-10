@@ -11,8 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('diris', function (Blueprint $table) {
+        Schema::create('diri', function (Blueprint $table) {
             $table->id();
+            $table->string('page')->nullable();
+            $table->longText('media')->nullable();
+            $table->string('nama_lengkap')->nullable();
+            $table->string('nama_panggilan')->nullable();
+            $table->string('kontak')->nullable();
+            $table->string('email')->nullable();
+            $table->longText('tentang_saya')->nullable();
             $table->timestamps();
         });
     }
@@ -22,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('diris');
+        Schema::dropIfExists('diri');
     }
 };
